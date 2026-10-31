@@ -8,7 +8,5 @@ workflows:
     scripts:
       - name: 下载IPA
         script: wget https://te-st.top/app.ipa -O app.ipa
-    publishing:
-      app_store_connect:
-        auth: integration
-        submit_to_testflight: false
+      - name: 上传IPA到ASC（带回执日志）
+        script: app-store-connect publish --path app.ipa --asc-integration eric
