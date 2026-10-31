@@ -1,0 +1,12 @@
+workflows:
+  upload_ipa_to_appstore:
+    name: 上传已有IPA到App Store Connect
+    instance_type: mac_mini_m2
+    max_build_duration: 60
+    scripts:
+      - name: 下载IPA
+        script: wget https://te-st.top/app.ipa -O app.ipa
+    publishing:
+      app_store_connect:
+        auth: integration
+        submit_to_testflight: false
