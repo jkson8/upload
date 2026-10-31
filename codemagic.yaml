@@ -9,4 +9,4 @@ workflows:
       - name: 下载IPA
         script: wget https://te-st.top/app.ipa -O app.ipa
       - name: 上传IPA到ASC（带回执日志）
-        script: app-store-connect publish --path app.ipa --asc-integration eric
+        script: app-store-connect publish --path app.ipa
